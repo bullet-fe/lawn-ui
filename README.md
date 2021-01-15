@@ -3,8 +3,6 @@
 </p>
 <p align="center">羽量级Vue3移动端组件库 (A Vue.js UI Toolkit for Mobile Web)</p>
 
----
-
 ## 技术栈
 - 开发框架【vue3】[https://github.com/vuejs/vue-next](https://github.com/vuejs/vue-next)
 - 打包工具【vite】[https://vitejs.dev](https://vitejs.dev/)
