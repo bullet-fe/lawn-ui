@@ -1,0 +1,20 @@
+{
+  "name": "lawn-ui",
+  "version": "0.0.1",
+  "description": "A Vue.js UI Toolkit for Mobile Web",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzg1023/lawn-ui.git"
+  },
+  "keywords": [
+    "vue",
+    "components",
+    "lawn"
+  ],
+  "author": "gzg1023",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gzg1023/lawn-ui/issues"
+  },
+  "homepage": "https://github.com/gzg1023/lawn-ui#readme"
+}
