@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="logo" src="https://sm.ms/delete/iBdkIn2H1Psb7zxVApMOTW8XEf" width="140" height="133">
+    <img alt="logo" src="https://i.loli.net/2021/03/06/GCHcpikNDSaBZQV.png" width="140" height="133">
 </p>
 <p align="center">羽量级Vue3移动端组件库 (A Vue.js UI Toolkit for Mobile Web)</p>
 
