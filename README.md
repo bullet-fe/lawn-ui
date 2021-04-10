@@ -6,7 +6,7 @@
 ## 技术栈
 - 开发框架【vue3】[https://github.com/vuejs/vue-next](https://github.com/vuejs/vue-next)
 - 类型增强【TypeScript】[https://github.com/microsoft/TypeScript](https://github.com/microsoft/TypeScript)
-- 工具文档[vitepress][https://github.com/vuejs/vitepress](https://github.com/vuejs/vitepress)
+- 工具文档【vitepress】[https://github.com/vuejs/vitepress](https://github.com/vuejs/vitepress)
 - 打包工具【vite】[https://vitejs.dev](https://vitejs.dev/)
 - 自动工具【plop】[https://github.com/plopjs/plop](https://github.com/plopjs/plop)
 
