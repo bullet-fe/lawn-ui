@@ -1,0 +1,84 @@
+{
+    "components": [
+      {
+        "name": "基础组件",
+        "packages": [
+          {
+            "name": "Popup",
+            "cName": "弹出层",
+            "type": "base",
+            "desc": "页面的弹出/遮罩层组件",
+            "isDev": true
+          },
+          {
+            "name": "Toast",
+            "cName": "吐司提示",
+            "type": "base",
+            "desc": "吐司提示组件",
+            "isDev": false
+          },
+          {
+            "name": "Dialog",
+            "cName": "对话框",
+            "type": "base",
+            "desc": "对话框组件",
+            "isDev": false
+          },
+          {
+            "name": "Picker",
+            "cName": "选择器",
+            "type": "base",
+            "desc": "选择器组件，可用于时间日期等",
+            "isDev": false
+          },
+          {
+            "name": "actionSheet",
+            "cName": "动作面板",
+            "type": "base",
+            "desc": "动作面板组件",
+            "isDev": false
+          },
+          {
+            "name": "mobileInput",
+            "cName": "输入框",
+            "type": "base",
+            "desc": "输入框组件",
+            "isDev": false
+          }
+        ]
+      },
+      {
+        "name": "业务组件",
+        "packages": [
+          {
+            "name": "pullRefresh",
+            "cName": "下拉刷新",
+            "type": "business",
+            "desc": "下拉刷新页面组件",
+            "isDev": false
+          },
+          {
+            "name": "infiniteScroll",
+            "cName": "无限滚动",
+            "type": "business",
+            "desc": "无限滚动组件",
+            "isDev": false
+          },
+          {
+            "name": "mobileTouch",
+            "cName": "手势滑动",
+            "type": "business",
+            "desc": "手势滑动组件",
+            "isDev": false
+          },
+          {
+            "name": "lazyload",
+            "cName": "懒加载",
+            "type": "business",
+            "desc": "懒加载组件",
+            "isDev": false
+          }
+        ]
+      }
+    ]
+  }

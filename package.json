@@ -1,7 +1,23 @@
 {
   "name": "lawn-ui",
   "version": "0.0.1",
+  "main": "./dist/lawn.umd.js",
+  "module": "./dist/lawn.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lawn.es.js",
+      "require": "./dist/lawn.umd.js"
+    }
+  },
   "description": "A Vue.js UI Toolkit for Mobile Web",
+  "scripts": {
+    "dev": "node ./scripts/create-main.js && vite",
+    "build": "vite build",
+    "generate": "plop --plopfile ./scripts/create-component.js",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gzg1023/lawn-ui.git"
@@ -16,5 +32,25 @@
   "bugs": {
     "url": "https://github.com/gzg1023/lawn-ui/issues"
   },
-  "homepage": "https://github.com/gzg1023/lawn-ui#readme"
+  "homepage": "https://github.com/gzg1023/lawn-ui#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/compiler-sfc": "^3.0.11",
+    "husky": "4.3.0",
+    "less": "^4.1.1",
+    "plop": "^2.7.4",
+    "vite": "^2.2.3",
+    "vitepress": "^0.13.2"
+  },
+  "dependencies": {
+    "vue": "3.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"pre-commit 钩子函数\" ",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  }
 }
