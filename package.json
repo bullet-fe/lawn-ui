@@ -38,10 +38,12 @@
     "@commitlint/config-conventional": "^12.1.1",
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.11",
+    "autoprefixer": "^10.2.5",
     "husky": "4.3.0",
     "less": "^4.1.1",
     "plop": "^2.7.4",
     "vite": "^2.2.3",
+    "vite-babel-plugin": "^0.0.2",
     "vitepress": "^0.13.2"
   },
   "dependencies": {
@@ -49,8 +51,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"pre-commit 钩子函数\" ",
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
-  }
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "iOS >= 8",
+    "Android >= 4"
+  ]
 }

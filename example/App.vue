@@ -2,7 +2,7 @@
  <div>
     <img alt="Vue logo" class="logo" src="./assets/lawn-ui-logo.png" />
     <HelloWorld msg="Hello Vue 3 + Vite" />
-    <l-popup></l-popup>
+    <ln-popup></ln-popup>
  </div>
 </template>
 

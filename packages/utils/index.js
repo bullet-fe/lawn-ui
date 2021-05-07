@@ -1,5 +1,3 @@
-import dom from "./dom";
-const PREFIX = "lawn";
+const PREFIX = "lawn"
 
-export { PREFIX }
-export {dom}
+export default  REFIX 
