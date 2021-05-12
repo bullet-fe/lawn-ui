@@ -1,6 +1,18 @@
 .ln-popup {
   position: fixed;
-  pointer-events: none;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.4);
+}
+
+.lawnFade-enter-active,
+.lawnFade-leave-active {
+  animation: topToBottom 300ms;
+}
+
+.lawnFade-enter-from,
+.lawnFade-leave-to {
+  animation: bottomToTop 300ms;
 }

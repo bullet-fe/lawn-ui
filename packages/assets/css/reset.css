@@ -6,3 +6,44 @@ div,span,p,input,img {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+.lawn-overflow-hidden{
+	overflow: hidden !important;
+}
+
+@keyframes topToBottom {
+	from{
+		transform: translateY(100%);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+
+@keyframes bottomToTop {
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(100%);
+	}
+}
+
+@keyframes leftToRight {
+	from{
+		transform: translateX(0);
+	}
+	to{
+		transform: translateX(100%);
+	}
+}
+
+
+@keyframes rightToLeft {
+	from{
+		transform: translateX(100%);
+	}
+	to{
+		transform: translateX(0);
+	}
+}

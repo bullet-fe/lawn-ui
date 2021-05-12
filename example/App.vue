@@ -1,8 +1,11 @@
 <template>
  <div>
-    <img alt="Vue logo" class="logo" src="./assets/lawn-ui-logo.png" />
+    <img alt="Vue logo" class="logo" src="./assets/lawn-ui-logo.png" @click="showPopupHandle" />
     <HelloWorld msg="Hello Vue 3 + Vite" />
-    <ln-popup></ln-popup>
+    <ln-popup v-model:show="showPopup" @clickPopup="clickPopup" :customStyle="{color:'red'}" customClass="12323" :luckScroll="true">
+      弹窗内容
+    </ln-popup>
+    <ln-popup v-model:show="showPopup2"></ln-popup>
  </div>
 </template>
 
@@ -14,10 +17,22 @@ export default{
   },
   created(){
     console.log(this)
+  },
+  data() {
+    return {
+      showPopup: false,
+      showPopup2: false
+    }
+  },
+  methods:{
+    showPopupHandle(){
+      this.showPopup = true
+    },
+    clickPopup(){
+      this.showPopup = false
+    }
   }
 }
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
 </script>
 
 <style>
