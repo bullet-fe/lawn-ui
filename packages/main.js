@@ -1,4 +1,4 @@
-import './assets/css/reset.css'
+import './assets/css/public.less'
 import './assets/css/var.less'
 import Popup from './Popup/index.vue';
 

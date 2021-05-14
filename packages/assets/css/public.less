@@ -47,3 +47,42 @@ div,span,p,input,img {
 		transform: translateX(0);
 	}
 }
+
+@keyframes openToClose {
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+	}
+}
+
+@keyframes closeToOpen {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+
+.lawnVertical-enter-active,
+.lawnVertical-leave-active {
+  animation: topToBottom 300ms;
+}
+
+.lawnVertical-enter-from,
+.lawnVertical-leave-to {
+  animation: bottomToTop 300ms;
+}
+
+.lawnHorizontal-enter-active,
+.lawnHorizontal-leave-active {
+  animation: rightToLeft 300ms;
+}
+
+.lawnHorizontal-enter-from,
+.lawnHorizontal-leave-to {
+  animation: leftToRight 300ms;
+}

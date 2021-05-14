@@ -5,8 +5,24 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: '开始', link: '/guide/' },
-            { text: 'GitHub', link: 'https://github.com/gzg1023/lawn-ui' },
-        ]
+            { text: 'GitHub', link: 'https://github.com/bullet-fe/lawn-ui' },
+        ],
+        sidebar:{
+            '/': [
+                {
+                    text: '快速开始',
+                    link: '/guide/'
+                },
+                {
+                    text: '组件',
+                    children: [
+                        {
+                            text: 'popup',
+                            link: '/guide/popup'
+                          },
+                    ]
+                }
+            ]
+        }
     }
-  }
-  
+}

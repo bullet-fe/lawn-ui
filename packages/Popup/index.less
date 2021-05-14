@@ -4,15 +4,16 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color:rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.lawnFade-enter-active,
-.lawnFade-leave-active {
-  animation: topToBottom 300ms;
+.lawnPopuopShow-enter-active,
+.lawnPopuopShow-leave-active {
+  transition: opacity 0.5s;
 }
 
-.lawnFade-enter-from,
-.lawnFade-leave-to {
-  animation: bottomToTop 300ms;
+.lawnPopuopShow-enter-from,
+.lawnPopuopShow-leave-to {
+  transition: opacity 1;
+  opacity: 0;
 }

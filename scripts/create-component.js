@@ -42,6 +42,11 @@ module.exports = function (plop) {
                 templateFile: '../config/templates/template.less'
             },
             {
+                type: 'add',
+                path: '../packages/{{item}}/index.md',
+                templateFile: '../config/templates/template.md'
+            },
+            {
                 type: 'modify',
                 path: '../config/config.json',
                 transform:(fileStr,enterObj)=>{

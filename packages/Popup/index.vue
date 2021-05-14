@@ -1,12 +1,11 @@
 <template>
-  <teleport to="body">
+  <teleport :to="teleportDom">
     <transition
       :name="transitionName"
       @before-enter="onBeforeEnter"
       @before-leave="onBeforeLeave"
       @after-enter="onAfterEnter"
       @after-leave="onAfterLeave"
-      @click="onClick"
     >
       <div
         class="ln-popup"
@@ -33,7 +32,7 @@ export default defineComponent({
     },
     transitionName: {
       type: String,
-      default: "lawnFade",
+      default: "lawnPopuopShow",
     },
     customStyle: {
       type: Object,
@@ -47,6 +46,10 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    teleportDom:{
+      type: String,
+      default: "body",
+    }
   },
   emits: [
     "update:show",
@@ -82,14 +85,12 @@ export default defineComponent({
       emit("afterLeave", e);
       unlockScroll();
     };
-    const onClick = () => {};
     return {
       zIndex,
       onBeforeEnter,
       onBeforeLeave,
       onAfterEnter,
       onAfterLeave,
-      onClick,
       clickPopupHandle,
     };
   }
@@ -99,7 +100,3 @@ export default defineComponent({
 <style lang="less">
 @import "index.less";
 </style>
-
-
-     
-      
