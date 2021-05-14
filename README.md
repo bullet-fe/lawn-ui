@@ -14,7 +14,7 @@
 
 ### 基础组件
 
-- [*] Popup 弹出层
+- [x] Popup 弹出层
 - [ ] Toast 吐司提示
 - [ ] Dialog 对话框
 - [ ] Picker 选择器
