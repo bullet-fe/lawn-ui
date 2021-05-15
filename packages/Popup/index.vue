@@ -21,7 +21,7 @@
 </template>
 
 <script steup>
-import { defineComponent, computed, onMounted } from "vue";
+import { defineComponent, computed } from "vue";
 import { useZIndex, useLockScroll } from "../utils/index";
 export default defineComponent({
   name: "ln-popup",
@@ -64,15 +64,13 @@ export default defineComponent({
       return useZIndex();
     });
     const [lockScroll, unlockScroll] = useLockScroll();
-    onMounted(() => {
-      if (props.uckScroll) {
-        lockScroll();
-      }
-    });
     const clickPopupHandle = (e) => {
       emit("clickPopup", e);
     };
     const onBeforeEnter = (e) => {
+      if (props.luckScroll) {
+        lockScroll();
+      }
       emit("beforeEnter", e);
     };
     const onBeforeLeave = (e) => {
