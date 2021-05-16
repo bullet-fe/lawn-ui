@@ -15,7 +15,7 @@
             "cName": "吐司提示",
             "type": "base",
             "desc": "吐司提示组件",
-            "isDev": false
+            "isDev": true
           },
           {
             "name": "Dialog",

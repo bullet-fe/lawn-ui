@@ -12,9 +12,11 @@
         :class="customClass"
         @click="clickPopupHandle"
         v-if="show"
-        :style="{ 'z-index': zIndex, ...customStyle }"
+        :style="{ 'z-index': zIndex, ...customStyle, ...controlStyle }"
       >
-        <slot></slot>
+        <div class="ln-popup-content" :style="{ 'z-index': zIndex + 1 }">
+          <slot></slot>
+        </div>
       </div>
     </transition>
   </teleport>
@@ -46,10 +48,14 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    teleportDom:{
+    teleportDom: {
       type: String,
       default: "body",
-    }
+    },
+    canPointBg: {
+      type: Boolean,
+      default: true
+    },
   },
   emits: [
     "update:show",
@@ -83,6 +89,9 @@ export default defineComponent({
       emit("afterLeave", e);
       unlockScroll();
     };
+    const controlStyle = {
+      "pointer-events": props.canPointBg ? "auto" : "none",
+    };
     return {
       zIndex,
       onBeforeEnter,
@@ -90,8 +99,9 @@ export default defineComponent({
       onAfterEnter,
       onAfterLeave,
       clickPopupHandle,
+      controlStyle,
     };
-  }
+  },
 });
 </script>
 
