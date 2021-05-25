@@ -1,7 +1,7 @@
 <template>
   <ln-popup v-model:show="show" :luckScroll="true" :canPointBg="canPointBg">
     <div class="ln-dialog" :style="customStyle" :class="customClass">
-      <header class="ln-dialog-header">{{ headerText }}</header>
+      <header v-if="headerText !== ''" class="ln-dialog-header">{{ headerText }}</header>
       <main class="ln-dialog-main">
         <slot></slot>
       </main>
