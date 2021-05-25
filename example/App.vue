@@ -7,7 +7,11 @@
     </ln-popup>
     <button @click="showToast">吐司</button>
     <button @click="closeToast">关闭吐司</button>
-    <ln-toast v-model:show="showToastFlag" position="center" :duration="2000" @close="closeHandle"><p>生生世世生生世世生生世世生生世世生生世世生生世世是谁</p></ln-toast>
+    <button @click="showDialogFlag = true">Dialog</button>
+    <ln-toast v-model:show="showToastFlag" position="center" :duration="0" @close="closeHandle"><p>生生世世生生世世生生世世生生世世生生世世生生世世是谁</p></ln-toast>
+    <ln-dialog  v-model:show="showDialogFlag" @clickBtnHandle="clickBtnHandle">
+      <p>请支付1000w，确保您的身份正确，确定继续吗？</p>
+    </ln-dialog>
  </div>
 </template>
 
@@ -24,7 +28,8 @@ export default{
     return {
       showPopup: false,
       showPopup2: false,
-      showToastFlag:false
+      showToastFlag:false,
+      showDialogFlag: false
     }
   },
   methods:{
@@ -42,6 +47,9 @@ export default{
     },
     closeToast(){
       this.showToastFlag = false
+    },
+    clickBtnHandle(val){
+        console.log(val)
     }
   },
   created(){

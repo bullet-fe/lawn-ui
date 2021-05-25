@@ -4,7 +4,7 @@
 </div>
 </template>
 
-<script steup>
+<script>
 import { defineComponent } from 'vue'
 export default defineComponent({
   name:'ln-{{item}}',

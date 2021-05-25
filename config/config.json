@@ -22,7 +22,7 @@
             "cName": "对话框",
             "type": "base",
             "desc": "对话框组件",
-            "isDev": false
+            "isDev": true
           },
           {
             "name": "Picker",

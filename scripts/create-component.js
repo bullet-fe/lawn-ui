@@ -4,7 +4,7 @@ const config = require('../config/config.json');
 const packages =  []
 config.components.forEach((item)=>{
     item.packages.forEach((item2)=>{
-        packages.push(item2)
+        item2.isDev ? '' : packages.push(item2)
     })
 })
 

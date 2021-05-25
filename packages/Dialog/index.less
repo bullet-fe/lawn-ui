@@ -1,0 +1,32 @@
+.ln-dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 16px;
+    transform: translate3d(-50%, -50%,0);
+    &-header{
+        padding: var(--content-padding);
+        max-height: 20px;
+        text-align: center;
+        font-size: var(--font-size-lg);
+    }
+    &-main{
+        padding: var(--content-padding);
+        font-size: var(--font-size-md);
+    }
+    &-footer{
+        padding: var(--content-padding) 0;
+        font-size: var(--font-size-lg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        &-btn{
+            flex: 1;
+        }
+    }
+}

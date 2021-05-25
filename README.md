@@ -15,8 +15,8 @@
 ### 基础组件
 
 - [x] Popup 弹出层
-- [ ] Toast 吐司提示
-- [ ] Dialog 对话框
+- [x] Toast 吐司提示
+- [x] Dialog 对话框
 - [ ] Picker 选择器
 - [ ] actionSheet 动作面板
 - [ ] mobileInput 输入框
