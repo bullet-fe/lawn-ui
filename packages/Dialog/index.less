@@ -19,14 +19,37 @@
         font-size: var(--font-size-md);
     }
     &-footer{
-        padding: var(--content-padding) 0;
         font-size: var(--font-size-lg);
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+        height: 40px;
+        line-height: 40px;
         &-btn{
             flex: 1;
+            // border-right: 1px solid #dedede;
+            // border-top: 1px solid #dedede;
+            position: relative;
+            &::after{
+                content:'';
+                position:absolute;
+                top: 0;
+                left: 0;
+                width: 200%;
+                height: 200%;
+                transform: scale(0.5);
+                transform-origin: left top;
+                box-sizing: border-box;
+                border-top: 1px solid var(--border-color);
+                border-right: 1px solid var(--border-color);
+              }
+             
+        }
+        &-btn:last-child{
+            &::after{
+                border-right: none;
+            }
         }
     }
 }
