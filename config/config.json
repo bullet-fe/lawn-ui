@@ -36,7 +36,7 @@
             "cName": "动作面板",
             "type": "base",
             "desc": "动作面板组件",
-            "isDev": false
+            "isDev": true
           },
           {
             "name": "mobileInput",

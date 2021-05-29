@@ -8,10 +8,12 @@
     <button @click="showToast">吐司</button>
     <button @click="closeToast">关闭吐司</button>
     <button @click="showDialogFlag = true">Dialog</button>
+    <button @click="showActionHandle">动作面板</button>
     <ln-toast v-model:show="showToastFlag" position="center" :duration="0" @close="closeHandle"><p>生生世世生生世世生生世世生生世世生生世世生生世世是谁</p></ln-toast>
     <ln-dialog  v-model:show="showDialogFlag" @clickBtnHandle="clickBtnHandle">
       <p>请支付1000w，确保您的身份正确，确定继续吗？</p>
     </ln-dialog>
+    <ln-action-sheet v-model:show="showActionFlag" :sheetList="sheetList"></ln-action-sheet>
  </div>
 </template>
 
@@ -29,7 +31,18 @@ export default{
       showPopup: false,
       showPopup2: false,
       showToastFlag:false,
-      showDialogFlag: false
+      showDialogFlag: false,
+      showActionFlag: false,
+      sheetList:[
+        {
+          label:'<p>选项一</p>',
+          valeu:1
+        },
+        {
+          label:'选项二',
+          valeu:2
+        }
+      ]
     }
   },
   methods:{
@@ -50,6 +63,9 @@ export default{
     },
     clickBtnHandle(val){
         console.log(val)
+    },
+    showActionHandle(){
+      this.showActionFlag = !this.showActionFlag
     }
   },
   created(){
