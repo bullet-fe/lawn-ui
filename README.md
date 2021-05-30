@@ -18,7 +18,7 @@
 - [x] Toast 吐司提示
 - [x] Dialog 对话框
 - [ ] Picker 选择器
-- [ ] actionSheet 动作面板
+- [x] actionSheet 动作面板
 - [ ] mobileInput 输入框
 
 ### 业务组件
