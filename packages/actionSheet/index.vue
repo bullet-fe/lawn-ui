@@ -5,29 +5,31 @@
     :canPointBg="canPointBg"
     @clickPopup="clickPopupHandle"
   >
-    <div
-      class="ln-action-sheet"
-      @click.stop="clickActionSheet"
-      v-if="show"
-    >
-      <div class="ln-action-sheet-item">{{ sheetTitle }}</div>
-      <div class="ln-action-sheet-list" v-if="sheetList.length > 0">
-        <div
-          class="ln-action-sheet-item"
-          v-for="(item, index) in sheetList"
-          :key="index"
-          @click="selectActionHandle(item, index)"
-        >
-          <div v-html="item.label"></div>
+    <transition name="lawnVertical">
+      <div
+        class="ln-action-sheet"
+        @click.stop="clickActionSheet"
+        v-if="showAction"
+      >
+        <div class="ln-action-sheet-item" v-if="sheetTitle">{{ sheetTitle }}</div>
+        <div class="ln-action-sheet-list" v-if="sheetList.length > 0">
+          <div
+            class="ln-action-sheet-item"
+            v-for="(item, index) in sheetList"
+            :key="index"
+            @click="selectActionHandle(item, index)"
+          >
+            <div v-html="item.label"></div>
+          </div>
         </div>
+        <slot></slot>
       </div>
-      <slot></slot>
-    </div>
+    </transition>
   </ln-popup>
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, watch } from "vue";
 import lnPopup from "../Popup/index.vue";
 export default defineComponent({
   name: "ln-action-sheet",
@@ -68,9 +70,14 @@ export default defineComponent({
   },
   emits: ["update:show", "clickContent", "clickOverlay", "selectItem"],
   setup(props, { emit }) {
+    let showAction = ref(false);
+
     const clickPopupHandle = () => {
       if (props.clickOverlayClose) {
-        emit("update:show", false);
+        showAction.value = false;
+        setTimeout(() => {
+          emit("update:show", false);
+        }, 100);
       }
       emit("clickOverlay");
     };
@@ -79,14 +86,27 @@ export default defineComponent({
     };
     const selectActionHandle = (item, index) => {
       if (props.clickItemClose) {
-        emit("update:show", false);
+        showAction.value = false;
+        setTimeout(() => {
+          emit("update:show", false);
+        }, 100);
       }
       emit("selectItem", item, index);
     };
+
+    watch(
+      () => props.show,
+      () => {
+        setTimeout(() => {
+          showAction.value = props.show;
+        }, 0);
+      }
+    );
     return {
       clickPopupHandle,
       clickActionSheet,
-      selectActionHandle
+      selectActionHandle,
+      showAction,
     };
   },
 });
