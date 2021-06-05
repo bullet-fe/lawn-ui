@@ -62,7 +62,7 @@
             "cName": "无限滚动",
             "type": "business",
             "desc": "无限滚动组件",
-            "isDev": false
+            "isDev": true
           },
           {
             "name": "mobileTouch",

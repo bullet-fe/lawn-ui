@@ -9,6 +9,7 @@
 - 工具文档【vitepress】[https://github.com/vuejs/vitepress](https://github.com/vuejs/vitepress)
 - 打包工具【vite】[https://vitejs.dev](https://vitejs.dev/)
 - 自动工具【plop】[https://github.com/plopjs/plop](https://github.com/plopjs/plop)
+- vue检测元素相交指令【vue-observe-visibility】[https://github.com/Akryum/vue-observe-visibility](https://github.com/Akryum/vue-observe-visibility)
 
 ## 待做清单
 
@@ -24,7 +25,7 @@
 ### 业务组件
 
 - [ ] pullRefresh 下拉刷新
-- [ ] infiniteScroll 无限滚动
+- [x] infiniteScroll 无限滚动
 - [ ] mobileTouch 手势滑动
 - [ ] lazyload 懒加载
 
