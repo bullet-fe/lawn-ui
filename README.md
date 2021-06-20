@@ -27,7 +27,7 @@
 - [ ] pullRefresh 下拉刷新
 - [x] infiniteScroll 无限滚动
 - [ ] mobileTouch 手势滑动
-- [ ] lazyload 懒加载
+- [x] lazyImg 懒加载图片
 
 ### 文件目录
 

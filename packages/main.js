@@ -6,9 +6,10 @@ import Toast from './Toast/index.vue';
 import Dialog from './Dialog/index.vue';
 import actionSheet from './actionSheet/index.vue';
 import infiniteScroll from './infiniteScroll/index.vue';
+import lazyImg from './lazyImg/index.vue';
 
 function install(Vue) {
-  const packages = [Popup,Toast,Dialog,actionSheet,infiniteScroll];
+  const packages = [Popup,Toast,Dialog,actionSheet,infiniteScroll,lazyImg];
   packages.forEach((item) => {
     Vue.component(item.name, item);
   });
@@ -21,5 +22,5 @@ function install(Vue) {
     unmounted: ObserveVisibility.unbind
   })
 }
-export { Popup,Toast,Dialog,actionSheet,infiniteScroll };
+export { Popup,Toast,Dialog,actionSheet,infiniteScroll,lazyImg };
 export default install;

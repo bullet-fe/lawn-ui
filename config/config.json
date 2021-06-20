@@ -72,11 +72,11 @@
             "isDev": false
           },
           {
-            "name": "lazyload",
+            "name": "lazyImg",
             "cName": "懒加载",
             "type": "business",
-            "desc": "懒加载组件",
-            "isDev": false
+            "desc": "懒加载图片组件",
+            "isDev": true
           }
         ]
       }
