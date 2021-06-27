@@ -2,7 +2,7 @@ const package = require('../package.json');
 const config = require('../config/config.json');
 const path = require('path');
 const fs = require('fs-extra');
-let importStr = `import './assets/css/public.less'\nimport './assets/css/var.less'\nimport { ObserveVisibility } from 'vue-observe-visibility' \n`;
+let importStr = `import './assets/css/public.less'\nimport './assets/css/var.less'\nimport { ObserveVisibility } from 'vue-observe-visibility' \nimport $toast from './Toast/index.js'\n`;
 const packages = [];
 config.components.map(item => {
   item.packages.forEach(element => {
@@ -27,6 +27,7 @@ let installFunction = `function install(Vue) {
     updated: ObserveVisibility.update,
     unmounted: ObserveVisibility.unbind
   })
+  Vue.config.globalProperties.$toast = $toast
 }`;
 let fileStr = `${importStr}
 ${installFunction}

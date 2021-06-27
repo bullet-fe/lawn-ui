@@ -37,13 +37,6 @@
             "type": "base",
             "desc": "动作面板组件",
             "isDev": true
-          },
-          {
-            "name": "mobileInput",
-            "cName": "输入框",
-            "type": "base",
-            "desc": "输入框组件",
-            "isDev": false
           }
         ]
       },

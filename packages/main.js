@@ -1,6 +1,7 @@
 import './assets/css/public.less'
 import './assets/css/var.less'
 import { ObserveVisibility } from 'vue-observe-visibility' 
+import $toast from './Toast/index.js'
 import Popup from './Popup/index.vue';
 import Toast from './Toast/index.vue';
 import Dialog from './Dialog/index.vue';
@@ -21,6 +22,7 @@ function install(Vue) {
     updated: ObserveVisibility.update,
     unmounted: ObserveVisibility.unbind
   })
+  Vue.config.globalProperties.$toast = $toast
 }
 export { Popup,Toast,Dialog,actionSheet,infiniteScroll,lazyImg };
 export default install;

@@ -20,7 +20,6 @@
 - [x] Dialog 对话框
 - [ ] Picker 选择器
 - [x] actionSheet 动作面板
-- [ ] mobileInput 输入框
 
 ### 业务组件
 

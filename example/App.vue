@@ -155,9 +155,11 @@ export default {
       this.loadingList = [];
       this.page = 0;
       this.isFinishFlag = false;
-    },
+    }
   },
-  mounted() {},
+  mounted() {
+    this.$toast('测试toast')
+  },
 };
 </script>
 

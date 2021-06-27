@@ -4,7 +4,7 @@
     :customStyle="toastPopupStyle"
     :canPointBg="canPointBg"
   >
-    <div class="ln-toast" :class="toastPosition"><slot></slot></div>
+    <div class="ln-toast" :class="toastPosition">{{instanceText}}<slot></slot></div>
   </ln-popup>
 </template>
 
@@ -33,6 +33,10 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    instanceText:{
+      type: String,
+      default: "",
+    }
   },
   emits: ["update:show", "closeToask", "close"],
   setup(props, { emit }) {
@@ -67,9 +71,9 @@ export default defineComponent({
       toastPopupStyle,
       toastPosition: toastPosition[props.position],
       openToask,
-      closeToask,
+      closeToask
     };
-  },
+  }
 });
 </script>
 

@@ -8,6 +8,7 @@
     <transition name="lawnVertical">
       <div
         class="ln-action-sheet"
+        :class="isBangs ? 'ln-action-sheet-bangs' : ''"
         @click.stop="clickActionSheet"
         v-if="showAction"
       >
@@ -31,6 +32,7 @@
 <script>
 import { defineComponent, ref, watch } from "vue";
 import lnPopup from "../Popup/index.vue";
+import { useBangsIphone } from "../utils/index";
 export default defineComponent({
   name: "ln-action-sheet",
   components: {
@@ -66,12 +68,11 @@ export default defineComponent({
     sheetTitle: {
       type: String,
       default: "标题",
-    },
+    }
   },
   emits: ["update:show", "clickContent", "clickOverlay", "selectItem"],
   setup(props, { emit }) {
     let showAction = ref(false);
-
     const clickPopupHandle = () => {
       if (props.clickOverlayClose) {
         showAction.value = false;
@@ -102,11 +103,16 @@ export default defineComponent({
         }, 0);
       }
     );
+    
+
+    const isBangs = useBangsIphone()
+
     return {
       clickPopupHandle,
       clickActionSheet,
       selectActionHandle,
       showAction,
+      isBangs
     };
   },
 });
