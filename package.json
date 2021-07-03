@@ -1,6 +1,6 @@
 {
   "name": "lawn-ui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./dist/lawn.umd.js",
   "module": "./dist/lawn.es.js",
   "exports": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gzg1023/lawn-ui.git"
+    "url": "git+https://github.com/bullet-fe/lawn-ui.git"
   },
   "keywords": [
     "vue",
@@ -30,9 +30,9 @@
   "author": "gzg1023",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gzg1023/lawn-ui/issues"
+    "url": "https://github.com/bullet-fe/lawn-ui/issues"
   },
-  "homepage": "https://github.com/gzg1023/lawn-ui#readme",
+  "homepage": "https://github.com/bullet-fe/lawn-ui#readme",
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
