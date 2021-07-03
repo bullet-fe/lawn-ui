@@ -48,7 +48,7 @@
             "cName": "下拉刷新",
             "type": "business",
             "desc": "下拉刷新页面组件",
-            "isDev": false
+            "isDev": true
           },
           {
             "name": "infiniteScroll",

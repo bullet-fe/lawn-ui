@@ -23,7 +23,7 @@
 
 ### 业务组件
 
-- [ ] pullRefresh 下拉刷新
+- [x] pullRefresh 下拉刷新
 - [x] infiniteScroll 无限滚动
 - [ ] mobileTouch 手势滑动
 - [x] lazyImg 懒加载图片
