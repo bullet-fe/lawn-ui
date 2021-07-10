@@ -41,7 +41,6 @@ export default defineComponent({
   },
   emits: ["refresh"],
   setup(props, { emit }) {
-    onMounted(() => {});
     const startLocation = ref(0);
     const isRefresh = ref(false);
     const moveDistance = ref(0);

@@ -29,7 +29,7 @@
             "cName": "选择器",
             "type": "base",
             "desc": "选择器组件，可用于时间日期等",
-            "isDev": false
+            "isDev": true
           },
           {
             "name": "actionSheet",

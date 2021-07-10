@@ -1,12 +1,15 @@
 <template>
   <div>
-    <!-- <img alt="Vue logo" class="logo" src="./assets/lawn-ui-logo.png" />
-    <HelloWorld msg="Hello Vue 3 + Vite" /> -->
-    <ln-pull-refresh @refresh="onRefresh" v-model:isLoading="isLoading">
-      <div v-for="players,i in 10" :key="i" class="list-item">
-        {{ i }}
-      </div>
-    </ln-pull-refresh>
+    <img alt="Vue logo" class="logo" src="./assets/lawn-ui-logo.png" />
+    <HelloWorld msg="Hello Vue 3 + Vite" />
+    <ln-picker
+      v-model:visible="show"
+      :list-data="listData"
+      :defaultValueData="{value:'海北藏族自治区'}"
+      title="城市选择"
+      @confirm="confirm"
+      @onChange="onChangeHandle"
+    ></ln-picker>
   </div>
 </template>
 
@@ -18,24 +21,25 @@ export default {
   },
   data() {
     return {
-      players: ['kobe', 'fisher', 'jordan', 'shark', 'duncun'],
-      isLoading: false
+      show: true,
+      listData: [
+        "南京市",
+        "无锡市",
+        "海北藏族自治区",
+        "北京市",
+        "连云港市",
+        "浙江市",
+        "江苏市",
+      ],
     };
   },
   methods: {
-    onRefresh() {
-      console.log('f')
-      this.isLoading = true
-      setTimeout(() => {
-        for (let i = 0; i < 4; i++) {
-          this.players.unshift(
-            "player No." + Math.floor(Math.random() * 10) + 1
-          );
-        }
-      
-        this.isLoading = false
-      }, 1000);
+    confirm(val) {
+      console.log('val: ', val);
     },
+    onChangeHandle(val){
+        console.log(val)
+    }
   },
   mounted() {},
 };
