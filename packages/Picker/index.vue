@@ -1,16 +1,16 @@
 <template>
-  <div class="nut-picker" :class="customClassName ? customClassName : null">
-    <div class="nut-picker-control">
-      <span class="nut-picker-cancel-btn" @click="closeActionSheet">关闭</span>
-      <div class="nut-picker-title">{{ title ? title : "" }}</div>
-      <span class="nut-picker-confirm-btn" @click="confirmHandle">确认</span>
+  <div class="ln-picker" :class="customClass ? customClass : null">
+    <div class="ln-picker-control">
+      <span class="ln-picker-cancel-btn" @click="closeActionSheet">关闭</span>
+      <div class="ln-picker-title">{{ title ? title : "" }}</div>
+      <span class="ln-picker-confirm-btn" @click="confirmHandle">确认</span>
     </div>
-    <div class="nut-picker-panel">
-      <div class="nut-picker-list" ref="listRef">
-        <div class="nut-picker-roller" ref="rollerRef">
+    <div class="ln-picker-panel">
+      <div class="ln-picker-list" ref="listRef">
+        <div class="ln-picker-roller" ref="rollerRef">
           <div
-            class="nut-picker-roller-item"
-            :class="{ 'nut-picker-roller-item-hidden': isHidden(index + 1) }"
+            class="ln-picker-roller-item"
+            :class="{ 'ln-picker-roller-item-hidden': isHidden(index + 1) }"
             v-for="(item, index) in listData"
             :style="setRollerStyle(index + 1)"
             :key="item.label ? item.label : index"
@@ -18,23 +18,23 @@
             {{ item.value ? item.value : item }}
           </div>
         </div>
-        <div class="nut-picker-content">
-          <div class="nut-picker-list-panel" ref="listPanelRef">
+        <div class="ln-picker-content">
+          <div class="ln-picker-list-panel" ref="listPanelRef">
             <div
-              class="nut-picker-item"
+              class="ln-picker-item"
               v-for="(item, index) in listData"
               :key="item.label ? item.label : index"
             >
               {{ item.value ? item.value : item }}
             </div>
             <div
-              class="nut-picker-placeholder"
+              class="ln-picker-placeholder"
               v-if="listData && listData.length === 1"
             ></div>
           </div>
         </div>
-        <div class="nut-picker-mask"></div>
-        <div class="nut-picker-indicator"></div>
+        <div class="ln-picker-mask"></div>
+        <div class="ln-picker-indicator"></div>
       </div>
     </div>
   </div>
@@ -51,7 +51,7 @@ import {
 export default defineComponent({
   name: "ln-picker",
   props: {
-    customClassName: {
+    customClass: {
       type: String,
       default: null,
     },
