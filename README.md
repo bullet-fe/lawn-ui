@@ -10,6 +10,8 @@
 - 打包工具【vite】[https://vitejs.dev](https://vitejs.dev/)
 - 自动工具【plop】[https://github.com/plopjs/plop](https://github.com/plopjs/plop)
 - vue检测元素相交指令【vue-observe-visibility】[https://github.com/Akryum/vue-observe-visibility](https://github.com/Akryum/vue-observe-visibility)
+- 网站发布平台【netlify】[https://app.netlify.com](https://app.netlify.com)
+
 
 ## 待做清单
 
@@ -18,7 +20,7 @@
 - [x] Popup 弹出层
 - [x] Toast 吐司提示
 - [x] Dialog 对话框
-- [ ] Picker 选择器
+- [x] Picker 选择器
 - [x] actionSheet 动作面板
 
 ### 业务组件
