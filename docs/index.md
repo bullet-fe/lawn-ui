@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: .vitepress/public/logo.png
+# heroImage: .vitepress/public/logo.png
 heroAlt: lawn-ui logo
 heroText: lawn-ui
 tagline: 羽量级vue3 移动端ui组件库

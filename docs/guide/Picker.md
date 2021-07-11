@@ -1,3 +1,7 @@
+---
+title: Picker组件
+---
+
 # Picker 组件
 
 ## 使用

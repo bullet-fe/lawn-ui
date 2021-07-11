@@ -7,7 +7,7 @@ module.exports = {
             { text: '开始', link: '/guide/' },
             { text: 'GitHub', link: 'https://github.com/bullet-fe/lawn-ui' },
         ],
-        sidebar:{
+        sidebar: {
             '/': [
                 {
                     text: '快速开始',
@@ -17,9 +17,37 @@ module.exports = {
                     text: '组件',
                     children: [
                         {
-                            text: 'popup',
-                            link: '/guide/popup'
-                          },
+                            text: 'Popup',
+                            link: '/guide/Popup'
+                        },
+                        {
+                            text: 'Toast',
+                            link: '/guide/Toast'
+                        },
+                        {
+                            text: 'Dialog',
+                            link: '/guide/Dialog'
+                        },
+                        {
+                            text: 'Picker',
+                            link: '/guide/Picker'
+                        },
+                        {
+                            text: 'actionSheet',
+                            link: '/guide/actionSheet'
+                        },
+                        {
+                            text: 'pullRefresh',
+                            link: '/guide/pullRefresh'
+                        },
+                        {
+                            text: 'infiniteScroll',
+                            link: '/guide/infiniteScroll'
+                        },
+                        {
+                            text: 'lazyImg',
+                            link: '/guide/lazyImg'
+                        }
                     ]
                 }
             ]
